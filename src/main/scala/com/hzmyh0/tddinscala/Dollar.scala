@@ -1,5 +1,4 @@
 package com.hzmyh0.tddinscala
 
-class Dollar {
-
+class Dollar (amount: Int) {
 }
