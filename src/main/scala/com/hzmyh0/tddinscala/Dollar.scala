@@ -1,6 +1,6 @@
 package com.hzmyh0.tddinscala
 
 class Dollar (amount: Int) {
-  var amount = 10
+  var amount = 5 * 2
   def times(multiplier: Int) = {}
 }
