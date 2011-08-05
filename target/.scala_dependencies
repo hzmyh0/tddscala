@@ -2,6 +2,7 @@
 -------
 ../src/test/scala/samples/scalatest.scala -> ../src/test/scala/samples/scalatest.scala
 ../src/test/scala/samples/specs.scala -> ../src/test/scala/samples/specs.scala
+../src/test/scala/samples/junit.scala -> ../src/test/scala/samples/junit.scala
 -------
 ../src/test/scala/samples/scalatest.scala -> test-classes/samples/ListSuite$$anonfun$2.class
 ../src/test/scala/samples/scalatest.scala -> test-classes/samples/MapSpec$$anonfun$4$$anonfun$apply$mcV$sp$1.class
