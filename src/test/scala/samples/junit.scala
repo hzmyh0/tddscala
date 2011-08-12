@@ -2,7 +2,7 @@ package samples
 
 import org.junit._
 import Assert._
-import com.hzmyh0.tddinscala.Dollar
+import com.hzmyh0.tddinscala._
 
 @Test
 class AppTest {
