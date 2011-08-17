@@ -30,6 +30,7 @@ class AppTest {
       assertFalse(new Dollar(5) == new Dollar(6))
       assertTrue(new Franc(5) == new Franc(5))
       assertFalse(new Franc(5) == new Franc(6))
+      assertFalse(new Franc(5) == new Dollar(5))
     }
 
 //    @Test
