@@ -4,10 +4,4 @@ package com.hzmyh0.tddinscala
 class Dollar (amt: Int) extends Money {
   amount = amt
   def times(multiplier: Int) = {new Dollar(amount * multiplier)}
-//  override def equals (other: Any) = {
-//    other match {
-//      case that : Money => this.amount == that.amount
-//      case _ => false
-//    }
-//  }
 }
