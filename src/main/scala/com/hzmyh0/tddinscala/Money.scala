@@ -11,7 +11,7 @@ class Money(amt: Int, crncy: String) {
       case _ => false
     	}
   	}
-	def toString() : String = amount + " " + currency
+	override def toString() : String = amount + " " + currency
 }
 
 object Money {
