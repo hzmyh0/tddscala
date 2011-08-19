@@ -3,7 +3,7 @@ package com.hzmyh0.tddinscala
 class Money(amt: Int, crncy: String) {
 	protected var amount: Int = amt
 	protected var currencyVal: String = crncy
-	def times(multiplier: Int) : Money = null
+	def times(multiplier: Int) = new Money(amount * multiplier, currency)
 	def currency() = currencyVal
 	override def equals (other: Any) = {
     other match {
