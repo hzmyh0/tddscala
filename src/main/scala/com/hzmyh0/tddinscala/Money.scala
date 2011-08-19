@@ -9,8 +9,9 @@ class Money(amt: Int, crncy: String) {
     other match {
       case that : Money => this.amount == that.amount && this.getClass().equals(that.getClass())
       case _ => false
-    }
-  }
+    	}
+  	}
+	def toString() : String = amount + " " + currency
 }
 
 object Money {
