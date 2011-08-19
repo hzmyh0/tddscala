@@ -12,7 +12,7 @@ class AppTest {
     
     @Test
     def testMultiplication() = {
-      val five: Dollar = Money.dollar(5)
+      val five: Money = Money.dollar(5)
       assertEquals(new Dollar(10), five.times(2))
       assertEquals(new Dollar(15), five.times(3))
     }
