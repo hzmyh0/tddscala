@@ -1,8 +1,8 @@
 package com.hzmyh0.tddinscala
 
-abstract class Money {
-	protected var amount: Int = 0
-	protected var currencyVal: String = ""
+abstract class Money(amt: Int, crncy: String) {
+	protected var amount: Int = amt
+	protected var currencyVal: String = crncy
 	def times(multiplier: Int) : Money
 	def currency() = currencyVal
 	override def equals (other: Any) = {
