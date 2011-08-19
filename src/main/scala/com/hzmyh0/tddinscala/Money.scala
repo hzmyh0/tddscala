@@ -9,3 +9,7 @@ class Money {
     }
   }
 }
+
+object Money {
+  def dollar(amount : Int) : Dollar = new Dollar(amount)
+}
