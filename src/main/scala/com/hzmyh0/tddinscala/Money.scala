@@ -7,7 +7,7 @@ class Money(amt: Int, crncy: String) {
 	def currency() = currencyVal
 	override def equals (other: Any) = {
     other match {
-      case that : Money => this.amount == that.amount && this.getClass().equals(that.getClass())
+      case that : Money => this.amount == that.amount && currency() == that.currency()
       case _ => false
     	}
   	}

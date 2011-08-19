@@ -38,6 +38,11 @@ class AppTest {
       assertEquals("USD", Money.dollar(1).currency())
       assertEquals("CHF", Money.franc(1).currency())
     }
+    
+    @Test
+    def testDifferentClassEqquality() = {
+      assertTrue(new Money(10, "CHF") == new Franc(10, "CHF"))
+    }
 
 //    @Test
 //    def testKO() = assertTrue(false)
