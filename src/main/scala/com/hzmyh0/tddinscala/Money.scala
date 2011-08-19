@@ -1,9 +1,9 @@
 package com.hzmyh0.tddinscala
 
-abstract class Money(amt: Int, crncy: String) {
+class Money(amt: Int, crncy: String) {
 	protected var amount: Int = amt
 	protected var currencyVal: String = crncy
-	def times(multiplier: Int) : Money
+	def times(multiplier: Int) : Money = null
 	def currency() = currencyVal
 	override def equals (other: Any) = {
     other match {
