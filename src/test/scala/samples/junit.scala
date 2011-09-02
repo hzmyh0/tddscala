@@ -17,12 +17,12 @@ class AppTest {
       assertEquals(Money.dollar(15), five.times(3))
     }
     
-    @Test
-    def testFrancMultiplication() = {
-      val five: Money = Money.franc(5)
-      assertEquals(Money.franc(10), five.times(2))
-      assertEquals(Money.franc(15), five.times(3))
-    }
+//    @Test
+//    def testFrancMultiplication() = {
+//      val five: Money = Money.franc(5)
+//      assertEquals(Money.franc(10), five.times(2))
+//      assertEquals(Money.franc(15), five.times(3))
+//    }
     
     @Test
     def testEquality() = {
@@ -39,10 +39,10 @@ class AppTest {
       assertEquals("CHF", Money.franc(1).currency())
     }
     
-    @Test
-    def testDifferentClassEqquality() = {
-      assertTrue(new Money(10, "CHF") == new Franc(10, "CHF"))
-    }
+//    @Test
+//    def testDifferentClassEqquality() = {
+//      assertTrue(new Money(10, "CHF") == new Franc(10, "CHF"))
+//    }
 
 //    @Test
 //    def testKO() = assertTrue(false)
