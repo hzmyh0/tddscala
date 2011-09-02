@@ -12,6 +12,7 @@ class Money(amt: Int, crncy: String) {
     	}
   	}
 	override def toString() : String = amount + " " + currency
+	def plus(addend: Money): Money = new Money(amount + addend.amount, currency)
 }
 
 object Money {

@@ -17,19 +17,10 @@ class AppTest {
       assertEquals(Money.dollar(15), five.times(3))
     }
     
-//    @Test
-//    def testFrancMultiplication() = {
-//      val five: Money = Money.franc(5)
-//      assertEquals(Money.franc(10), five.times(2))
-//      assertEquals(Money.franc(15), five.times(3))
-//    }
-    
     @Test
     def testEquality() = {
       assertTrue(Money.dollar(5) == Money.dollar(5))
       assertFalse(Money.dollar(5) == Money.dollar(6))
-//      assertTrue(Money.franc(5) == Money.franc(5))
-//      assertFalse(Money.franc(5) == Money.franc(6))
       assertFalse(Money.franc(5) == Money.dollar(5))
     }
     
@@ -38,14 +29,12 @@ class AppTest {
       assertEquals("USD", Money.dollar(1).currency())
       assertEquals("CHF", Money.franc(1).currency())
     }
-    
-//    @Test
-//    def testDifferentClassEqquality() = {
-//      assertTrue(new Money(10, "CHF") == new Franc(10, "CHF"))
-//    }
 
-//    @Test
-//    def testKO() = assertTrue(false)
+    @Test
+    def testSimpleAddition() = {
+      val sum: Money = Money.dollar(5).plus(Money.dollar(5))
+      assertEquals(Money.dollar(10), sum)
+    }
 
 }
 
