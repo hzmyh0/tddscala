@@ -32,7 +32,9 @@ class AppTest {
 
     @Test
     def testSimpleAddition() = {
-      val sum: Money = Money.dollar(5).plus(Money.dollar(5))
+      val five: Money = Money.dollar(5)
+      val sum: Expression = five.plus(five)
+      val bank: Bank = new Bank()
       val reduced: Money = bank.reduce(sum, "USD")
       assertEquals(Money.dollar(10), reduced)
     }

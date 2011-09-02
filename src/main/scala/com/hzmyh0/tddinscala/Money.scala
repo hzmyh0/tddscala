@@ -1,6 +1,6 @@
 package com.hzmyh0.tddinscala
 
-class Money(amt: Int, crncy: String) {
+class Money(amt: Int, crncy: String) extends Expression {
 	protected var amount: Int = amt
 	protected var currencyVal: String = crncy
 	def times(multiplier: Int) = new Money(amount * multiplier, currency)
@@ -12,7 +12,7 @@ class Money(amt: Int, crncy: String) {
     	}
   	}
 	override def toString() : String = amount + " " + currency
-	def plus(addend: Money): Money = new Money(amount + addend.amount, currency)
+	def plus(addend: Money): Expression = new Money(amount + addend.amount, currency)
 }
 
 object Money {
