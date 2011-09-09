@@ -43,7 +43,7 @@ class AppTest {
     def testPlusReturnsSum() = {
       val five: Money = Money.dollar(5)
       val result: Expression = five.plus(five)
-      val sum: Sum = (Sum) result
+      val sum: Sum = result.asInstanceOf[Sum]
       assertEquals(five, sum.augend)
       assertEquals(five, sum.addend)
     }
