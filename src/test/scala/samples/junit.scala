@@ -39,6 +39,14 @@ class AppTest {
       assertEquals(Money.dollar(10), reduced)
     }
 
+    @Test
+    def testPlusReturnsSum() = {
+      val five: Money = Money.dollar(5)
+      val result: Expression = five.plus(five)
+      val sum: Sum = (Sum) result
+      assertEquals(five, sum.augend)
+      assertEquals(five, sum.addend)
+    }
 }
 
 
