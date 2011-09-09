@@ -47,6 +47,14 @@ class AppTest {
       assertEquals(five, sum.augend)
       assertEquals(five, sum.addend)
     }
+    
+    @Test
+    def testReduceSum() = {
+      val sum: Expression = new Sum(Money.dollar(3), Money.dollar(4))
+      val bank: Bank = new Bank()
+      val result: Money = bank.reduce(sum, "USD")
+      assertEquals(Money.dollar(7), result)
+    }
 }
 
 
