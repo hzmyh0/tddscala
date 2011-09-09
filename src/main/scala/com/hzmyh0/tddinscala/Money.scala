@@ -13,6 +13,7 @@ class Money(amt: Int, crncy: String) extends Expression {
   	}
 	override def toString() : String = amount + " " + currency
 	def plus(addend: Money): Expression = new Sum(this, addend)
+	def reduce(to: String): Money = this
 }
 
 object Money {
