@@ -13,9 +13,10 @@ class Money(amt: Int, crncy: String) extends Expression {
   	}
 	override def toString() : String = amount + " " + currency
 	def plus(addend: Money): Expression = new Sum(this, addend)
-	def reduce(to: String): Money = {
-	  val rate: Int = if (currency.equals("CHF") && to.equals("USD")) 2 else 1
-	  return new Money(amount / rate, to)
+	def reduce(source: Expression, to: String): Money = {
+//	  val rate: Int = if (currency.equals("CHF") && to.equals("USD")) 2 else 1 
+//	  return new Money(amount / rate, to)
+	  return source.reduce(this, to)
 	}
 }
 
