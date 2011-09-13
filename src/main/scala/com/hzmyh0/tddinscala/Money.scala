@@ -3,6 +3,7 @@ package com.hzmyh0.tddinscala
 class Money(amt: Int, crncy: String) extends Expression {
 /*	protected*/ var amount: Int = amt
 	protected var currencyVal: String = crncy
+	
 	def times(multiplier: Int) = new Money(amount * multiplier, currency)
 	def currency() = currencyVal
 	override def equals (other: Any) = {
@@ -14,7 +15,7 @@ class Money(amt: Int, crncy: String) extends Expression {
 	override def toString() : String = amount + " " + currency
 	def plus(addend: Money): Expression = new Sum(this, addend)
 	def reduce(bank: Bank, to: String): Money = {
-	  val rate: Int = if (currency.equals("CHF") && to.equals("USD")) 2 else 1 
+	  val rate: Int = bank.rate(currencyVal, to) 
 	  return new Money(amount / rate, to)
 	}
 }
