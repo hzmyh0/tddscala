@@ -1,6 +1,6 @@
 package com.hzmyh0.tddinscala
 
-private class Pair(f: String, t: String) {
+class Pair(f: String, t: String) {
 	private val from: String = f
 	private val to: String = t
 	
