@@ -70,6 +70,11 @@ class AppTest {
       val result: Money = bank.reduce(Money.franc(2), "USD")
       assertEquals(Money.dollar(1), result)
     }
+    
+    @Test
+    def testArrayEquals() = {
+      assertEquals(Array[Any]("abc"), Array[Any]("abc"))
+    }
 }
 
 
