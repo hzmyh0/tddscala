@@ -1,6 +1,8 @@
 package samples
 
 import org.junit._
+import org.junit.runner.JUnitCore
+
 import Assert._
 import com.hzmyh0.tddinscala._
 
@@ -82,4 +84,8 @@ class AppTest {
     }
 }
 
-
+object AppTest {
+  def main(args: Array[String]): Unit = {
+    JUnitCore.main(classOf[AppTest].getName())
+  }
+}
