@@ -8,7 +8,9 @@ class Bank() {
 			source.reduce(this, to)
 	}
 	def rate(from: String, to: String): Int = {
-	  if (from.equals("CHF") && to.equals("USD")) 2 else 1
+//	  if (from.equals("CHF") && to.equals("USD")) 2 else 1
+	  if (from.equals(to)) return 1
+	  return rates(new Pair(from, to))
 	}
 	def addRate(from: String, to: String, rate: Int): Unit = {
 //	  rates.put(new Pair(from, to), rate)

@@ -66,7 +66,7 @@ class AppTest {
     @Test
     def testReduceMoneyDifferentCurrency() = {
       val bank: Bank = new Bank()
-//      bank.addRate("CHF", "USD", 2)
+      bank.addRate("CHF", "USD", 2)
       val result: Money = bank.reduce(Money.franc(2), "USD")
       assertEquals(Money.dollar(1), result)
     }
@@ -74,6 +74,11 @@ class AppTest {
     @Test
     def testArrayEquals() = {
       assertEquals(Array[Any]("abc"), Array[Any]("abc"))
+    }
+    
+    @Test
+    def testIdentityRate() = {
+      assertEquals(1, new Bank().rate("USD", "USD"))
     }
 }
 
